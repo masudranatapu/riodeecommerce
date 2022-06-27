@@ -1,6 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// admin
+use App\Http\Controllers\Admin\DashboardController;
+// user
+use App\Http\Controllers\User\InformationController;
+
+// fornt 
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +20,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['as' => 'admin.', 'prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+});
+
+Route::group(['as' => 'user.', 'prefix' => 'user', 'middleware' => ['auth', 'user']], function () {
+    Route::get('/information', [InformationController::class, 'information'])->name('information');
 });
