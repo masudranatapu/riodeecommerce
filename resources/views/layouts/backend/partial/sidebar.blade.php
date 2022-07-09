@@ -23,7 +23,39 @@
                 <span class="menu-title" data-i18n="Email">Dashboard</span>
             </a>
         </li>
-        <li class=" navigation-header"><span>Apps</span>
+        <li class="nav-item">
+            <a href="javascript:;">
+                <i class="feather icon-list"></i>
+                <span class="menu-title" data-i18n="Manage Category">
+                    Manage Category
+                </span>
+            </a>
+            <ul class="menu-content">
+                <li>
+                    <a href="{{route('admin.category.index')}}">
+                        <i class="feather icon-circle"></i>
+                        <span class="menu-item" data-i18n="Shop">
+                            Category
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="feather icon-circle"></i>
+                        <span class="menu-item" data-i18n="Parent Category">
+                            Parent Category
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="feather icon-circle"></i>
+                        <span class="menu-item" data-i18n="Child Category">
+                            Child Category
+                        </span>
+                    </a>
+                </li>
+            </ul>
         </li>
         <li class=" nav-item"><a href="app-email.html"><i class="feather icon-mail"></i><span class="menu-title" data-i18n="Email">Email</span></a>
         </li>
@@ -32,18 +64,6 @@
         <li class=" nav-item"><a href="app-todo.html"><i class="feather icon-check-square"></i><span class="menu-title" data-i18n="Todo">Todo</span></a>
         </li>
         <li class=" nav-item"><a href="app-calender.html"><i class="feather icon-calendar"></i><span class="menu-title" data-i18n="Calender">Calender</span></a>
-        </li>
-        <li class=" nav-item"><a href="#"><i class="feather icon-shopping-cart"></i><span class="menu-title" data-i18n="Ecommerce">Ecommerce</span></a>
-            <ul class="menu-content">
-                <li><a href="app-ecommerce-shop.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Shop</span></a>
-                </li>
-                <li><a href="app-ecommerce-details.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Details</span></a>
-                </li>
-                <li><a href="app-ecommerce-wishlist.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Wish List">Wish List</span></a>
-                </li>
-                <li><a href="app-ecommerce-checkout.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Checkout">Checkout</span></a>
-                </li>
-            </ul>
         </li>
         <li class=" nav-item"><a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User</span></a>
             <ul class="menu-content">
@@ -57,7 +77,7 @@
         </li>
         <li class=" navigation-header"><span>UI Elements</span>
         </li>
-        <li class=" nav-item"><a href="#"><i class="feather icon-list"></i><span class="menu-title" data-i18n="Data List">Data List</span><span class="badge badge badge-primary badge-pill float-right mr-2">New</span></a>
+        <li class=" nav-item"><a href="#"><i class="feather icon-shopping-cart"></i><span class="menu-title" data-i18n="Data List">Data List</span><span class="badge badge badge-primary badge-pill float-right mr-2">New</span></a>
             <ul class="menu-content">
                 <li><a href="data-list-view.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List View">List View</span></a>
                 </li>
